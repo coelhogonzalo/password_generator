@@ -17,5 +17,7 @@ def password(request):
     if numbers:
         choices = choices + string.digits
     userPassword = ''.join(random.choices(choices, k = length))    
-   
     return render(request, 'generator/password.html', {'password': userPassword})
+
+def about(request):
+    return render(request, 'generator/about.html')
